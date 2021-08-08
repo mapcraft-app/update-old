@@ -10,13 +10,13 @@
 	  "debug": "pkg --output update ."
 	},
 	"pkg": {
-	  "outputPath": "out",
 	  "assets": "node_modules/**/*",
 	  "targets": [
       "latest-macos-x64",
       "latest-win-x64",
       "latest-linux-x64"
-	  ]
+	  ],
+	  "outputPath": "build"
 	},
 	"dependencies": {
 	  "adm-zip": "^0.5.5",
