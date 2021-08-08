@@ -31,10 +31,10 @@ release:
     - rm -f TAG_VERSION.txt CI_JOB_ID.txt
     - |
       release-cli create --name "v$TAG_VERSION" --tag-name $TAG_VERSION --ref $CI_COMMIT_SHA \
-      --assets-link "{\"name\":\"Windows\",\"url\":\"https://gitlab.com/cbertran/mapcraft-update/-/jobs/`echo "${CI_ID}"`/artifacts/raw/out/update-win.exe\"}" \
+      --assets-link "{\"name\":\"Windows\",\"url\":\"https://gitlab.com/cbertran/mapcraft-update/-/jobs/`echo "${CI_ID}"`/artifacts/raw/update-win.exe\"}" \
       \
-      --assets-link "{\"name\":\"Linux\",\"url\":\"https://gitlab.com/cbertran/mapcraft-update/-/jobs/`echo "${CI_ID}"`/artifacts/raw/out/update-linux\"}" \
+      --assets-link "{\"name\":\"Linux\",\"url\":\"https://gitlab.com/cbertran/mapcraft-update/-/jobs/`echo "${CI_ID}"`/artifacts/raw/update-linux\"}" \
       \
-      --assets-link "{\"name\":\"MacOS archive\",\"url\":\"https://gitlab.com/cbertran/mapcraft-update/-/jobs/`echo "${CI_ID}"`/artifacts/raw/out/update-macos\"}"
+      --assets-link "{\"name\":\"MacOS archive\",\"url\":\"https://gitlab.com/cbertran/mapcraft-update/-/jobs/`echo "${CI_ID}"`/artifacts/raw/update-macos\"}"
   rules:
     - if: $CI_COMMIT_TAG
