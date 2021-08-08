@@ -1,0 +1,27 @@
+{
+	"name": "auto_update_mapcraft",
+	"bin": "index.js",
+	"main": "index.js",
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+	  "start": "node index.js",
+	  "build": "pkg --compress Brotli --output update .",
+	  "debug": "pkg --output update ."
+	},
+	"pkg": {
+	  "outputPath": "out",
+	  "assets": "node_modules/**/*",
+	  "targets": [
+      "latest-macos-x64",
+      "latest-win-x64",
+      "latest-linux-x64"
+	  ]
+	},
+	"dependencies": {
+	  "adm-zip": "^0.5.5",
+	  "pkg": "^5.3.1"
+	},
+	"devDependencies": {}
+  }
+  
