@@ -15,10 +15,7 @@ var MAPCRAFT_EXEC;
 if (OS.platform() === 'win32') MAPCRAFT_EXEC = 'mapcraft.exe';
 else MAPCRAFT_EXEC = 'mapcraft';
 const EXECUTABLE = path.join(process.cwd(), MAPCRAFT_EXEC);
-var relaunch = child.exec(EXECUTABLE, (error, stdout, stderr) => {
-	if (error)
-		throw error;
-});
+var relaunch = child.spawn(EXECUTABLE, {detached: true, stdio: ['ignore' /* stdin */, 'ignore' /* stdout */, 'ignore' /* stderr */]});
 relaunch.unref();
 process.exit(0);
 //#endregion

@@ -5,22 +5,22 @@
 	"version": "1.0.0",
 	"license": "MIT",
 	"scripts": {
-	  "start": "node index.js",
-	  "build": "pkg --compress Brotli --output update .",
-	  "debug": "pkg --output update ."
+		"start": "node index.js",
+		"build": "pkg --compress Brotli --output update .",
+		"debug": "pkg --output update ."
 	},
 	"pkg": {
-	  "assets": "node_modules/**/*",
-	  "targets": [
-      "latest-macos-x64",
-      "latest-win-x64",
-      "latest-linux-x64"
-	  ]
+		"assets": "node_modules/**/*",
+		"targets": [
+    		"latest-macos-x64",
+			"latest-win-x64",
+    		"latest-linux-x64"
+		]
 	},
 	"dependencies": {
-	  "adm-zip": "^0.5.5",
-	  "pkg": "^5.3.1"
+		"adm-zip": "^0.5.5",
+		"pkg": "^5.3.1"
 	},
 	"devDependencies": {}
-  }
+}
   
