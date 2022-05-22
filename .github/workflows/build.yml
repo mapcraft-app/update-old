@@ -20,7 +20,7 @@ jobs:
       - name: Build datapack
         run: |
           npm install
-          npm build
+          npm run build
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
